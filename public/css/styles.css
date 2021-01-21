@@ -4,7 +4,10 @@
 }
 
 html {
-    background-color: cornflowerblue;
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 950px;
+    font-family: 'helvetica neue';
 }
 
 .center {
