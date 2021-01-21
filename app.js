@@ -16,12 +16,15 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     let day = date.getDate();
 
+    //res.render's first argument is the .ejs file and 
+    //the second is a key/value pair javascript object
     res.render("list", {listTitle: day, listItems: items});
 });
 
 app.post('/', (req, res) => {
+    //use body-parser to get the item input on the page
     let item = req.body.newItem;
-
+    
     if(req.body.button === "Work"){
         workItems.push(item);
         res.redirect("/work");
